@@ -1,18 +1,18 @@
-import Header from "./component/header";
-import InputData from "./component/inputData";
-import PreviewData from "./component/previewData";
-import store from "./redux/store";
+import CartPage from "./component/cartPage";
+import ProductPage from "./component/productPage";
 import { Provider } from "react-redux";
-
+import { HashRouter, Route, Routes } from "react-router-dom";
+import store from "./redux/store";
 
 function App() {
   return (
     <Provider store={store}>
-      <Header />
-      <section>
-        <InputData />
-        <PreviewData />
-      </section>
+      <HashRouter>
+        <Routes>
+         <Route path="/" element={<ProductPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </HashRouter>
     </Provider>
   );
 }
