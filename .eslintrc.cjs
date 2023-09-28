@@ -14,8 +14,7 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true,
-      "react/no-unescaped-entities" : false },
+      { allowConstantExport: true },
     ],
   },
 }
