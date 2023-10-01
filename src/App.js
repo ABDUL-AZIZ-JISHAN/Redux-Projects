@@ -1,17 +1,23 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/navbar";
 import Home from "./pages/home";
-import Post from "./pages/post";
-import Navbar from "./component/navbar";
+import EditJob from "./pages/editJob";
+import PostJob from "./pages/postJob";
+import SideBar from "./components/sideBar";
 function App() {
-    return (
-        <Router>
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/post/:postId" element={<Post />} /> 
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <Navbar />
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
+        <SideBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/edit/:editId" element={<EditJob />} />
+          <Route path="/post" element={<PostJob />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

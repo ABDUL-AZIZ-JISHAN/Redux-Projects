@@ -1,12 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import postsReducer from '../features/posts/postsSlice';
-import postReducer from '../features/post/postSlice';
-import relatedPostReducer from '../features/relatedPosts/relatedPostSlice';
+import jobsReducer from '../features/job/jobSlice';
+
 const store = configureStore({
     reducer: {
-        blogs: postsReducer,
-        blog: postReducer, 
-        relatedPosts: relatedPostReducer
+        jobs: jobsReducer
     }
 });
 
