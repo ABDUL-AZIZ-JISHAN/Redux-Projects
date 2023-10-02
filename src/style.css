@@ -874,7 +874,16 @@ body {
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
-
+.sub-menu i {
+  margin-right: 10px;
+}
+.mr-10{
+  margin-right: 10px;
+}
+.sub-menu.menu-active{
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+}
 .sub-menu:hover {
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));

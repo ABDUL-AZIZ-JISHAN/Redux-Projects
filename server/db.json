@@ -2,8 +2,8 @@
   "jobs": [
     {
       "title": "DevOps Engineer",
-      "type": "Internship",
-      "salary": "25002",
+      "type": "Full Time",
+      "salary": "100000000000000",
       "deadline": "2024-12-31",
       "id": 2
     },
@@ -41,6 +41,13 @@
       "salary": "18000",
       "deadline": "2023-12-31",
       "id": 7
+    },
+    {
+      "title": "Software Engineer",
+      "type": "Full Time",
+      "salary": "100000000000000000000000000",
+      "deadline": "2023-10-03",
+      "id": 8
     }
   ]
 }

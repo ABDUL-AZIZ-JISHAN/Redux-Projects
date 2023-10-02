@@ -3,22 +3,24 @@ import { addJobs, editJobs, removeJobs, getJobs  } from "./jobsAPI"
 
 
 
-const fetchJobs = createAsyncThunk("jobs/fetchJobs", async ()=>{
-    let jobs = await getJobs();
+export const fetchJobs = createAsyncThunk("jobs/fetchJobs", async (id)=>{
+    let jobs = await getJobs(id);
     return jobs;
 });
 
- const deleteJob = createAsyncThunk("jobs/deleteJobs", async (id)=>{
-    let job = await removeJobs(id);
-    return job;
+export const deleteJob = createAsyncThunk("jobs/delteJobs", async (id)=>{
+    let response = await removeJobs(id);
+    if(response.status === 200) {
+      return  id;
+    }
 });
 
- const updateJob = createAsyncThunk("jobs/updateJob", async ({id, data})=>{
+export const updateJob = createAsyncThunk("jobs/updateJob", async ({id, data})=>{
     let job = await editJobs(id, data);
     return job;
 });
 
- const postJob = createAsyncThunk("jobs/postJob", async ({data})=>{
+export const postJob = createAsyncThunk("jobs/postJob", async (data)=>{
     let job = await addJobs(data);
     return job;
 });
@@ -27,12 +29,27 @@ const initialState = {
     jobs: [],
     isLoading: false,
     isError: false,
-    error: ''
+    error: '',
+    filteredJobs: [],
 }
 
 const jobSlice = createSlice({
     name: "jobs",
     initialState,
+    reducers: {
+      resetFilterJobs: (state) => {
+        state.filteredJobs = [];
+      },
+      internJobs: (state) => {
+        state.filteredJobs = state.jobs.filter((job) => job.type === "Internship");
+      },
+      remoteJobs: (state) => {
+        state.filteredJobs = state.jobs.filter((job) => job.type === "Remote");
+      },
+      fullTimeJobs: (state) => {
+        state.filteredJobs = state.jobs.filter((job) => job.type === "Full Time");
+      },
+    },
     extraReducers: (builders) => {
           builders
         //   reducers for get jobs
@@ -59,19 +76,17 @@ const jobSlice = createSlice({
             state.isLoading = true;
             state.isError = false;
             state.error = false;
-            state.jobs = [];
           })
           .addCase(deleteJob.rejected, (state , action)=> {
             state.isLoading = false;
             state.isError = true;
             state.error = action.payload?.error;
-            state.jobs = [];
           })
           .addCase(deleteJob.fulfilled, (state , action)=> {
             state.isLoading = false;
             state.isError = false;
             state.error = false;
-            state.jobs = state.jobs.filter(job => job.id === action.payload.id);
+            state.jobs = state.jobs.filter((job) => job.id !== action.payload);
           })
         //     //   reducers for add jobs
             .addCase(postJob.pending, (state , action)=> {
@@ -118,4 +133,4 @@ const jobSlice = createSlice({
 });
 
 export default jobSlice.reducer;
-export {postJob, updateJob, deleteJob, fetchJobs} = jobSlice.actions;
+export const {fullTimeJobs, internJobs, remoteJobs, resetFilterJobs} = jobSlice.actions;
