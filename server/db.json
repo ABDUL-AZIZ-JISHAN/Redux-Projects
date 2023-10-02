@@ -1,53 +1,31 @@
 {
-  "jobs": [
+  "books": [
     {
-      "title": "DevOps Engineer",
-      "type": "Full Time",
-      "salary": "100000000000000",
-      "deadline": "2024-12-31",
+      "name": "Slow Horses (Deluxe Edition)",
+      "author": "Mick Herron",
+      "thumbnail": "https://m.media-amazon.com/images/I/51Ga5GuElyL._SX331_BO1,204,203,200_.jpg",
+      "price": "140",
+      "rating": 3,
+      "featured": true,
+      "id": 1
+    },
+    {
+      "name": "The Last Thing He Told Me: A Novel",
+      "author": "Laura Dave",
+      "thumbnail": "https://m.media-amazon.com/images/P/1501171348.01._SCLZZZZZZZ_SX500_.jpg",
+      "price": 13.99,
+      "rating": 4,
+      "featured": false,
       "id": 2
     },
     {
-      "title": "QA Engineer",
-      "type": "Full Time",
-      "salary": "15000",
-      "deadline": "2023-12-31",
-      "id": 3
-    },
-    {
-      "title": "Product Manager",
-      "type": "Remote",
-      "salary": "18000",
-      "deadline": "2023-12-31",
+      "name": "Eloquent JavaScript, 3rd Edition",
+      "author": "Marijn Haverbeke",
+      "thumbnail": "https://m.media-amazon.com/images/I/51InjRPaF7L._SX377_BO1,204,203,200_.jpg",
+      "price": 23.99,
+      "rating": 4,
+      "featured": true,
       "id": 4
-    },
-    {
-      "title": "Social Media Manager",
-      "type": "Internship",
-      "salary": "20000",
-      "deadline": "2023-11-30",
-      "id": 5
-    },
-    {
-      "title": "Android App Developer",
-      "type": "Remote",
-      "salary": "35000",
-      "deadline": "2023-12-31",
-      "id": 6
-    },
-    {
-      "title": "Full Stack Developer",
-      "type": "Internship",
-      "salary": "18000",
-      "deadline": "2023-12-31",
-      "id": 7
-    },
-    {
-      "title": "Software Engineer",
-      "type": "Full Time",
-      "salary": "100000000000000000000000000",
-      "deadline": "2023-10-03",
-      "id": 8
     }
   ]
 }

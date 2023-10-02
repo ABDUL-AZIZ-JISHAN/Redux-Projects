@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import jobsReducer from '../features/job/jobSlice';
+import { APISlice } from "../features/api/APISlice";
 
 const store = configureStore({
-    reducer: {
-        jobs: jobsReducer
-    }
+  reducer: {
+    [APISlice.reducerPath]: APISlice.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(APISlice.middleware),
 });
 
 export default store;

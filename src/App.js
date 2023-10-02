@@ -1,21 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
-import EditJob from "./pages/editJob";
-import PostJob from "./pages/postJob";
-import SideBar from "./components/sideBar";
+import AddPage from "./pages/AddPage";
+import Edit from './pages/Edit'
+import { useState } from "react";
 function App() {
+
+  const [search , setSearch] = useState("");
   return (
     <Router>
-      <Navbar />
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 md:px-8">
-        <SideBar />
+      <Navbar setSearch={setSearch} search={search} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/edit/:editId" element={<EditJob />} />
-          <Route path="/post" element={<PostJob />} />
+          <Route path="/" element={<Home search={search} />} />
+          <Route path="/add" element={<AddPage />} />
+          <Route path="/edit/:id" element={<Edit />} />
         </Routes>
-      </div>
     </Router>
   );
 }
