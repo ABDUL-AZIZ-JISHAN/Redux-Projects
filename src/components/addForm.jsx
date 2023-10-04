@@ -1,135 +1,146 @@
 import { useEffect, useState } from "react";
+import { useGetTeamMembersQuery } from "../redux/features/teamMembers/teamMemberApi";
+import { useGetProjectsQuery } from "../redux/features/projects/projectApi";
+import uniqid from 'uniqid';
+import { useAddTaskMutation } from "../redux/features/task/tasksApi";
 import { useNavigate } from "react-router-dom";
-import { useAddBookMutation } from "../redux/features/api/APISlice";
-
+import Error from './error'
 const AddForm = () => {
-  const [addBook, { isLoading, isError, isSuccess }] = useAddBookMutation();
-  const navigate = useNavigate("");
-  const [name, setName] = useState("");
-  const [author, setAuthor] = useState("");
-  const [thumbnail, setThumbnail] = useState("");
-  const [price, setPrice] = useState("");
-  const [rating, setRating] = useState("");
-  const [featured, setFeatured] = useState(true);
+  const { data: teamMembers } = useGetTeamMembersQuery();
+  const { data: projects } = useGetProjectsQuery();
+  const [ addTask , {isLoading ,isSuccess,  isError, error}] = useAddTaskMutation();
+  const navigate = useNavigate();
+  const [taskName, setTaskName] = useState("");
+  const [assign, setAssign] = useState({});
+  const [project, setProject] = useState("");
+  const [deadline, setDeadLine] = useState("");
 
-  const resetForm = () => {
-    setName("");
-    setAuthor("");
-    setPrice("");
-    setFeatured(true);
-    setRating("");
-    setThumbnail("");
-  };
+  let selectColor;
 
-  const handleSubmit = (e) => {
+  switch (project) {
+    case "Scoreboard":
+      selectColor = "color-scoreboard";
+      break;
+    case "Flight Booking":
+      selectColor = "color-flight";
+      break;
+    case "Product Cart":
+      selectColor = "color-productCart";
+      break;
+    case "Book Store":
+      selectColor = "color-bookstore";
+      break;
+    case "Blog Application":
+      selectColor = "color-blog";
+      break;
+    default:
+      selectColor = "color-jobFinder";
+      break;
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const newBook = { name, author, thumbnail, price, rating, featured };
-    addBook(newBook);
+    const newTask = {
+      id: uniqid(),
+      taskName,
+      teamMember: JSON.parse(assign),
+      project: {id: uniqid(), projectName: project, colorClass: selectColor },
+      deadline,
+      status: "pending",
+    };
+    addTask(newTask);
   };
 
   useEffect(() => {
-    if (isSuccess) {
-      resetForm();
+    if(isSuccess === true){
+      setAssign("");
+      setProject("");
+      setTaskName("");
+      setDeadLine("");
       navigate("/");
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isSuccess]);
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="book-form">
-        <div className="space-y-2">
-          <label htmlFor="lws-bookName">Book Name</label>
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="text-input"
-            type="text"
-            id="lws-bookName"
-            name="name"
-          />
+    <div className="container relative">
+      <main className="relative z-20 max-w-3xl mx-auto rounded-lg xl:max-w-none">
+        <h1 className="mt-4 mb-8 text-3xl font-bold text-center text-gray-800">
+          Create Task for Your Team
+        </h1>
+        <div className="justify-center mb-10 space-y-2 md:flex md:space-y-0">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="fieldContainer">
+              <label htmlFor="lws-taskName">Task Name</label>
+              <input
+                type="text"
+                name="taskName"
+                id="lws-taskName"
+                required
+                placeholder="Implement RTK Query"
+                value={taskName}
+                onChange={(e) => setTaskName(e.target.value)}
+              />
+            </div>
+            <div className="fieldContainer">
+              <label>Assign To</label>
+              <select
+                value={assign}
+                onChange={(e) => setAssign(e.target.value)}
+                name="teamMember"
+                id="lws-teamMember"
+                required
+              >
+                <option>Select Member</option>
+                {teamMembers?.map((member) => {
+                  return (
+                    <option value={JSON.stringify(member)} key={member.id}>
+                      {member.name}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <div className="fieldContainer">
+              <label htmlFor="lws-projectName">Project Name</label>
+              <select
+                id="lws-projectName"
+                name="projectName"
+                value={project}
+                onChange={(e) => setProject(e.target.value)}
+                required
+              >
+                <option>Select Project</option>
+                {projects?.map((project) => {
+                  return (
+                    <option value={project.projectName} key={project.id}>
+                      {project.projectName}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+            <div className="fieldContainer">
+              <label htmlFor="lws-deadline">Deadline</label>
+              <input
+                value={deadline}
+                onChange={(e) => setDeadLine(e.target.value)}
+                type="date"
+                name="deadline"
+                id="lws-deadline"
+                required
+              />
+            </div>
+            <div className="text-right">
+              <button disabled={isLoading} type="submit" className="lws-submit">
+                Save Task
+              </button>
+            </div>
+          </form>
         </div>
-        <div className="space-y-2">
-          <label htmlFor="lws-author">Author</label>
-          <input
-            value={author}
-            onChange={(e) => setAuthor(e.target.value)}
-            required
-            className="text-input"
-            type="text"
-            id="lws-author"
-            name="author"
-          />
-        </div>
-        <div className="space-y-2">
-          <label htmlFor="lws-thumbnail">Image Url</label>
-          <input
-            value={thumbnail}
-            onChange={(e) => setThumbnail(e.target.value)}
-            required
-            className="text-input"
-            type="text"
-            id="lws-thumbnail"
-            name="thumbnail"
-          />
-        </div>
-        <div className="grid grid-cols-2 gap-8 pb-4">
-          <div className="space-y-2">
-            <label htmlFor="lws-price">Price</label>
-            <input
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              required
-              className="text-input"
-              type="number"
-              id="lws-price"
-              name="price"
-            />
-          </div>
-          <div className="space-y-2">
-            <label htmlFor="lws-rating">Rating</label>
-            <input
-              value={rating}
-              onChange={(e) => setRating(e.target.value)}
-              required
-              className="text-input"
-              type="number"
-              id="lws-rating"
-              name="rating"
-              min={1}
-              max={5}
-            />
-          </div>
-        </div>
-        <div className="flex items-center">
-          <input
-            checked={featured}
-            onChange={(e) => setFeatured(e.target.checked)}
-            id="lws-featured"
-            type="checkbox"
-            name="featured"
-            className="w-4 h-4"
-          />
-          <label htmlFor="lws-featured" className="ml-2 text-sm">
-            {" "}
-            This is a featured book{" "}
-          </label>
-        </div>
-        <button
-          disabled={isLoading}
-          type="submit"
-          className="submit"
-          id="lws-submit"
-        >
-          Edit Book
-        </button>
-      </form>
-      {isError && (
-        <h2 style={{ color: "red", margin: "10px 0" }}>
-          Something went Wrong to submit
-        </h2>
-      )}
-    </>
+        {isError && <Error/>}
+      </main>
+    </div>
   );
 };
 
