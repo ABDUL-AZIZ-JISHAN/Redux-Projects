@@ -21,15 +21,19 @@ const AdminLogin = () => {
     e.preventDefault();
     getUser(formData);
   };
+  
+
+
 
   useEffect(() => {
+
     if (isSuccess) {
       dispatch(addUser(userData));
       addToLocalStorage(userData);
       navigate("/admin"); 
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSuccess, userData]);
+
+  }, [isSuccess, userData, navigate, dispatch]);
 
   return (
     <section className="py-6 bg-primary h-screen grid place-items-center">
