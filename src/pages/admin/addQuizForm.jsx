@@ -38,7 +38,7 @@ export default function AddQuizForm() {
     if (isSuccess) {
       navigate("/admin/quizzes");
     }
-  }, [isSuccess]);
+  }, [isSuccess, navigate]);
 
   return (
     <div className="container mx-auto p-4">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useGetVideoQuizQuery } from '../redux/features/quzzes/quizzesApi';

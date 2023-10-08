@@ -1,10 +1,9 @@
 
 import { useEffect, useState } from "react";
-import uniqid from "uniqid";
 import { useGetVideosQuery } from "../../redux/features/videos/videosApi";
 import { useNavigate, useParams } from "react-router-dom";
 import Error from "../../components/error";
-import { useAddQuizMutation, useEditQuizMutation, useGetQuizQuery } from "../../redux/features/quzzes/quizzesApi";
+import { useEditQuizMutation, useGetQuizQuery } from "../../redux/features/quzzes/quizzesApi";
 
 export default function EditQuizForm() {
   const navigate = useNavigate();

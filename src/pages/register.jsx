@@ -12,7 +12,7 @@ const Register = () => {
   const dispatch = useDispatch();
   const [
     createUser,
-    { data: uploadData, isLoading, isError, error: uploadError, isSuccess },
+    { data: uploadData, isLoading, isError, error: uploadError },
   ] = useCreateUserMutation();
 
   const [name, setName] = useState("");

@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import { APISlice } from "../api/APISlice";
 
 export const AssignmentApi = APISlice.injectEndpoints({

@@ -3,19 +3,18 @@ import { useEditAssignmentMarkMutation, useGetAssignmentMarksQuery } from "../..
 import Loading from "../../components/loading";
 import Error from "../../components/error";
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 const AssignmentMark = () => {
   const {
     data: assignmentMarks,
     isLoading,
     isError,
   } = useGetAssignmentMarksQuery();
-const [editAssignmentMark, {data: uploadData,isSuccess: uploadSuccess, isError: uploadError}] = useEditAssignmentMarkMutation();
+const [editAssignmentMark, { isError: uploadError}] = useEditAssignmentMarkMutation();
   const pending = assignmentMarks?.filter((ass) => ass.status === "pending");
   const published = assignmentMarks?.filter(
     (ass) => ass.status === "published"
   );
-  const navigate = useNavigate();
   const [mark, setMark] = useState(100);
 
   const handleMarked = (value) => {

@@ -32,7 +32,7 @@ export default function AddAssignmentForm() {
     if(isSuccess){
         navigate("/admin/assignment")
     }
-  }, [isSuccess]);
+  }, [isSuccess, navigate]);
 
   return (
     <div className="container mx-auto p-4">

@@ -37,7 +37,7 @@ const formattedDate = `${year}-${month}-${day}`;
       if(isSuccess){
         setActive(!active);
       }
-    },[isSuccess])
+    },[isSuccess,setActive, active])
     return (
         <div className={active ?'assignment-modal active': 'assignment-modal'}>
             <div onClick={()=>setActive(!active)} style={{textAlign:"right", cursor: "pointer", marginBottom: "30px"}}>Cancel</div>

@@ -32,7 +32,7 @@ export default function AddVideoForm() {
     if (isSuccess) {
       navigate("/admin/videos");
     }
-  }, [isSuccess]);
+  }, [isSuccess, navigate]);
   return (
     <div className="container mx-auto p-4">
       <h3 className="mb-8 text-center text-4xl font-bold color-white">
