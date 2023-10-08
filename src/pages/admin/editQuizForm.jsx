@@ -46,7 +46,7 @@ const {data: formData } = useGetQuizQuery(id);
         const correctOptionIndex = options.findIndex((option) => option.isCorrect);
         setSelectedAns(correctOptionIndex !== -1 ? `${correctOptionIndex + 1}` : "");
     }
-  }, [isSuccess,formData]);
+  }, [isSuccess,formData, navigate]);
 
   return (
     <div className="container mx-auto p-4">

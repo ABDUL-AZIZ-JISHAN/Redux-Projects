@@ -49,7 +49,7 @@ export default function EditVideoForm() {
       setDuration(videoData.duration);
       setUrl(videoData.url);
     }
-  }, [getSuccess, videoData, uploadSuccess]);
+  }, [getSuccess, videoData, uploadSuccess, navigate]);
 
   return (
     <div className="container mx-auto p-4">

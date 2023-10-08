@@ -38,14 +38,14 @@ export default function AddAssignmentForm() {
       navigate("/admin/assignment");
     }
     if (isSuccess && formData) {
-      const value = {
-        video_id: formData.video_id,
-        video_title: formData.video_title,
-      };
+      // const value = {
+      //   video_id: formData.video_id,
+      //   video_title: formData.video_title,
+      // };
       setTitle(formData.title);
       setTotalMark(formData.totalMark);
     }
-  }, [isSuccess, uploadSuccess]);
+  }, [isSuccess, uploadSuccess, formData, navigate]);
 
   return (
     <div className="container mx-auto p-4">

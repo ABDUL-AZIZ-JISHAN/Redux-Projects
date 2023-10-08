@@ -2,7 +2,6 @@ import Navbar from "../../components/navbar";
 import { useEditAssignmentMarkMutation, useGetAssignmentMarksQuery } from "../../redux/features/assingmentMark/assignmentMarkApi.js";
 import Loading from "../../components/loading";
 import Error from "../../components/error";
-import { useNavigate } from "react-router-dom";
 import {  useState } from "react";
 const AssignmentMark = () => {
   const {

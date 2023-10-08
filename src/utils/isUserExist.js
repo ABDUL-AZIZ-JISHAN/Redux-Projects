@@ -8,7 +8,7 @@ const IsUserExist = () => {
     const user = getAuthUser();
     useEffect(()=> {
         dispatch(addUser(user));
-    },[user]);
+    },[user,dispatch]);
 
   return  user?.accessToken ? user : undefined;
 }
