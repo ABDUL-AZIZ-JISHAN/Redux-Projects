@@ -1,22 +1,52 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { resetUser } from "../redux/features/users/userSlice";
 
-const Navbar = ({ search, setSearch }) => {
+const Navbar = () => {
+  const { user } = useSelector(state => state.user.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const handleLogOut = () =>{
+    dispatch(resetUser());
+    localStorage.clear();
+     navigate("/login")
+  }
+
   return (
-    <nav className="container relative py-3">
-      <div className="flex items-center justify-between">
-        <Link to="/">
-          <h1 className="text-xl font-bold">Task Manager App</h1>
+    <nav className="shadow-md">
+      <div className="max-w-7xl px-5 lg:px-0 mx-auto flex justify-between py-3">
+        <Link
+          to="/"
+          style={{ color: "white", fontSize: "28px", fontWeight: "bold" }}
+        >
+          Learning Management App
         </Link>
-        <div className="flex-1 max-w-xs search-field group">
-          <i className="fa-solid fa-magnifying-glass search-icon group-focus-within:text-blue-500" />
-          <input
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            type="text"
-            placeholder="Search Task"
-            className="search-input"
-            id="lws-searchTask"
-          />
+        <div className="flex items-center gap-3">
+ <Link className="color-white" to="/admin">
+            Admin
+          </Link> 
+  {/* <Link className="color-white" to="/leaderboard">
+            Leaderboard
+          </Link>  */}
+          <h2 className="font-bold color-white">{user?.name}</h2>
+          <button onClick={handleLogOut} className="flex gap-2 border border-cyan items-center px-4 py-1 rounded-full text-sm transition-all hover:bg-cyan color-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
+              />
+            </svg>
+            Logout
+          </button>
         </div>
       </div>
     </nav>

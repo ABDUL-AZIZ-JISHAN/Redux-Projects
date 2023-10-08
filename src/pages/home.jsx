@@ -1,45 +1,41 @@
-// import SideBar from "../components/sideBar";
+import Navbar from "../components/navbar";
+import VideoSidebar from "../components/videoSidebar";
+import Video from "../components/video";
+import { useGetVideosQuery } from "../redux/features/videos/videosApi";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+const Home = () => {
+   const {id} = useParams();
+  const {data: videos} = useGetVideosQuery();
 
-import { Link } from "react-router-dom";
-import ProjectList from "../components/projectList";
-import TeamMemberList from "../components/teamMemberList";
-import TasksContainer from "../components/tasksContainer";
+  // Use useState to manage the video state
+  const [video, setVideo] = useState(null);
 
-const Home = ({search}) => {
+  useEffect(() => {
+    if (id) {
+      const selectedVideo = videos?.find((v) => v.id === parseInt(id));
+      if (selectedVideo) {
+        setVideo(selectedVideo);
+      } else {
+        setVideo(videos?.[0]);
+      }
+    } else {
+      setVideo(videos?.[0]);
+    }
+  }, [id, videos]);
+
   return (
-    <div className="container relative">
-      <div className="sidebar">
-        {/* Projects List */}
-        <ProjectList />
-        {/* Team Members */}
-        <TeamMemberList />
-      </div>
-
-      <div className="lg:pl-[16rem] 2xl:pl-[23rem]">
-        <main className="relative z-20 max-w-3xl mx-auto rounded-lg xl:max-w-none">
-          <div className="justify-between mb-10 space-y-2 md:flex md:space-y-0">
-            <Link to="/add" className="lws-addnew group">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6 group-hover:text-indigo-500"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 4.5v15m7.5-7.5h-15"
-                />
-              </svg>
-              <span className="group-hover:text-indigo-500">Add New</span>
-            </Link>
+    <>
+      <Navbar />
+      <section className="py-6 bg-primary">
+        <div className="mx-auto max-w-7xl px-5 lg:px-0">
+          <div className="grid grid-cols-3 gap-2 lg:gap-8">
+            <Video video={video} />
+            <VideoSidebar videos={videos} />
           </div>
-          <TasksContainer search={search} />
-        </main>
-      </div>
-    </div>
+        </div>
+      </section>
+    </>
   );
 };
 

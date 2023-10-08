@@ -1,8 +1,8 @@
 
 const Error = ({title}) => {
     return (
-        <h2 style={{color: "red", textAlign:'center'}}>
-            {title || "Something went wrong. Please try again or check your server."}
+        <h2 style={{fontSize: "18px", color: "red", margin: "20px 0", textAlign:"center"}}>
+            {title || "Something went wrong ..."}
         </h2>
     );
 }

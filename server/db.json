@@ -1,166 +1,1072 @@
 {
-  "projects": [
+  "users": [
     {
-      "id": 1,
-      "projectName": "Scoreboard",
-      "colorClass": "color-scoreboard"
-    },
-    {
-      "id": 2,
-      "projectName": "Flight Booking",
-      "colorClass": "color-flight"
-    },
-    {
-      "id": 3,
-      "projectName": "Product Cart",
-      "colorClass": "color-productCart"
-    },
-    {
-      "id": 4,
-      "projectName": "Book Store",
-      "colorClass": "color-bookstore"
-    },
-    {
-      "id": 5,
-      "projectName": "Blog Application",
-      "colorClass": "color-blog"
-    },
-    {
-      "id": 6,
-      "projectName": "Job Finder",
-      "colorClass": "color-jobFinder"
-    }
-  ],
-  "team": [
-    {
-      "name": "Sumit Saha",
-      "avatar": "/images/avatars/sumit.png",
-      "id": 1
-    },
-    {
+      "email": "saad.hasan@learnwithsumit.com",
+      "password": "$2a$10$4iJEmSkM1Dq6WMRb0SuJeeic1SEB9TrH3gw5IT441Adox/ZZXj2Ae",
+      "role": "student",
       "name": "Saad Hasan",
-      "avatar": "/images/avatars/sadh.png",
       "id": 2
     },
     {
+      "email": "akash.ahmed@learnwithsumit.com",
+      "password": "$2a$10$TNsYpL6ffKBrupNNvdJlleJlgIkp1C1xQJCbiv7HAl5Ggs.kucie2",
+      "role": "student",
       "name": "Akash Ahmed",
-      "avatar": "/images/avatars/akash.png",
       "id": 3
     },
     {
-      "name": "Md Salahuddin",
-      "avatar": "/images/avatars/salahuddin.png",
+      "email": "md.salahuddin@learnwithsumit.com",
+      "password": "$2a$10$dcWjzIi4mLAERlWE4nfJW.1/mvC9FXqZU8A2V1rPlsqIrP3kWa8PG",
+      "role": "student",
+      "name": "Mohammad Salahuddin",
       "id": 4
     },
     {
-      "name": "Riyadh Hassan",
-      "avatar": "/images/avatars/riyadh.png",
+      "email": "ferdous.shohag@learnwithsumit.com",
+      "password": "$2a$10$IZ6eXNauYSqMhl38Wc46texV2vjGZz.Zl66j7hrnW6ZDSDcMlPWeu",
+      "role": "student",
+      "name": "Ferdous",
       "id": 5
     },
     {
-      "name": "Ferdous Hassan",
-      "avatar": "/images/avatars/ferdous.png",
+      "email": "riyadh.vai@learnwithsumit.com",
+      "password": "$2a$10$e4XPY48UpqmAj8teZ2je8.qd5AEk6hWm5PQwDoJsCsE91qlDPJx1G",
+      "role": "student",
+      "name": "Riyadh",
       "id": 6
     },
     {
-      "name": "Arif Almas",
-      "avatar": "/images/avatars/almas.png",
+      "email": "arif.almas@learnwithsumit.com",
+      "password": "$2a$10$NN4pXB4tBMw.ySrMDPMymepSGDdcvKzx/RjNCrdNTENOFVLWCWGOi",
+      "role": "student",
+      "name": "Arif",
       "id": 7
+    },
+    {
+      "email": "fimran2011@gmail.com",
+      "password": "$2a$10$iNi0rNrBN.tnpQFoq8mmq.pWx2Rkvye1j7aiM.5x8H1W.JegE63Im",
+      "id": "lnh0e5f6",
+      "name": "ABDUL AZIZ JISHAN",
+      "role": "student"
+    },
+    {
+      "email": "student@gmail.com",
+      "password": "$2a$10$KPku.rdQMQ0StZSQN8Yv8uf3HmqS881Br/NGU.T0KZfxsYN/24mue",
+      "id": "lnhmefr3",
+      "name": "Student",
+      "role": "student"
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$PLqUBIdGeimcTyvh/JhhQedNWibjxQHuQuJ3FSidTWi/A3DsEWRm6",
+      "id": "lnhmfrmm",
+      "name": "Admin",
+      "role": "admin"
+    },
+    {
+      "email": "abdulazizjishan02@gmail.com",
+      "password": "$2a$10$s1p2So3nSc6SiLrsleXfOOixXQgUHBHb10txBRsPBRxhe4Pk.jUt2",
+      "id": "lnhnifas",
+      "name": "ABDUL AZIZ JISHAN",
+      "role": "student"
     }
   ],
-  "tasks": [
+  "videos": [
     {
-      "taskName": "Task One",
-      "teamMember": {
-        "name": "Saad Hasan",
-        "avatar": "/images/avatars/sadh.png",
-        "id": 2
-      },
-      "project": {
-        "id": 1,
-        "projectName": "Scoreboard",
-        "colorClass": "color-scoreboard"
-      },
-      "deadline": "2023-03-15",
       "id": 1,
-      "status": "inProgress"
+      "title": "What is JavaScript?",
+      "description": "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2023, 98.7% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.",
+      "url": "https://www.youtube.com/embed/upDLs1sn7g4?si=SrVYgby-AODjI2MI",
+      "views": "51.2K",
+      "duration": "5:30",
+      "createdAt": "2023-01-15"
     },
     {
-      "taskName": "Task Two",
-      "teamMember": {
-        "name": "Akash Ahmed",
-        "avatar": "/images/avatars/akash.png",
-        "id": 3
-      },
-      "project": {
-        "id": 2,
-        "projectName": "Flight Booking",
-        "colorClass": "color-flight"
-      },
-      "deadline": "2023-03-23",
-      "id": 2
+      "id": 2,
+      "title": "How to Bake a Perfect Chocolate Cake",
+      "description": "This tutorial demonstrates step-by-step instructions on how to bake a delicious chocolate cake from scratch. You'll learn all the tips and tricks to make your cake turn out perfect every time.",
+      "url": "https://www.youtube.com/embed/vI5w-fK25w4?si=BOk5zm_UrBHzT4Sp",
+      "views": "10K",
+      "duration": "2:45",
+      "createdAt": "2023-02-20"
     },
     {
-      "taskName": "Task Three",
-      "teamMember": {
-        "name": "Sumit Saha",
-        "avatar": "/images/avatars/sumit.png",
-        "id": 1
-      },
-      "project": {
-        "id": 3,
-        "projectName": "Product Cart",
-        "colorClass": "color-productCart"
-      },
-      "deadline": "2023-03-03",
-      "id": 3
+      "id": 3,
+      "title": "Learn Python Programming for Beginners",
+      "description": "If you're new to programming, this video series is perfect for you. We'll cover the basics of Python programming, including variables, loops, and functions. Start your coding journey today!",
+      "url": "https://www.youtube.com/embed/_uQrJ0TkZlc?si=hi6KdsNXxifVcRyd",
+      "views": "15K",
+      "duration": "3:15",
+      "createdAt": "2023-03-10"
     },
     {
-      "taskName": "New Task",
-      "teamMember": {
-        "name": "Sumit Saha",
-        "avatar": "/images/avatars/sumit.png",
-        "id": 1
-      },
-      "project": {
-        "id": 1,
-        "projectName": "Scoreboard",
-        "colorClass": "color-scoreboard"
-      },
-      "deadline": "2023-03-11",
-      "id": 4
+      "id": 4,
+      "title": "Travel Vlog: Exploring Beautiful Destinations",
+      "description": "Join us on a journey as we explore breathtaking destinations around the world. From exotic beaches to historic landmarks, our travel vlog has it all. Get inspired to plan your next adventure!",
+      "url": "https://www.youtube.com/embed/NwC1KH79t5s?si=F2chEbn150IMbktc",
+      "views": "8K",
+      "duration": "1:50",
+      "createdAt": "2023-04-05"
     },
     {
-      "taskName": "Fix a bug",
-      "teamMember": {
-        "name": "Md Salahuddin",
-        "avatar": "/images/avatars/salahuddin.png",
-        "id": 4
-      },
-      "deadline": "2023-03-18",
-      "project": {
-        "id": 4,
-        "projectName": "Book Store",
-        "colorClass": "color-bookstore"
-      },
       "id": 5,
-      "status": "completed"
+      "title": "Healthy Cooking Recipes for a Fit Lifestyle",
+      "description": "Discover a collection of nutritious and delicious recipes that are perfect for maintaining a healthy lifestyle. We'll show you how to prepare meals that taste great and keep you in shape.",
+      "url": "https://www.youtube.com/embed/aMDV2tfY9rM?si=dHiSE8UHsL-IWhDO",
+      "views": "20K",
+      "duration": "4:00",
+      "createdAt": "2023-05-12"
     },
     {
-      "id": "lnbkj68b",
-      "taskName": "Write Blog",
-      "teamMember": {
-        "name": "Ferdous Hassan",
-        "avatar": "/images/avatars/ferdous.png",
-        "id": 6
-      },
-      "project": {
-        "id": "lnbkj68c",
-        "projectName": "Blog Application",
-        "colorClass": "color-blog"
-      },
-      "deadline": "2023-10-11",
-      "status": "pending"
+      "id": 6,
+      "title": "Yoga and Meditation for Stress Relief",
+      "description": "In this series, we'll guide you through various yoga and meditation practices to help you manage stress and find inner peace. Achieve a state of relaxation and tranquility.",
+      "url": "https://www.youtube.com/embed/m3-O7gPsQK0?si=3PYpE1ekCEf9Rv8i",
+      "views": "12K",
+      "duration": "2:30",
+      "createdAt": "2023-06-25"
+    },
+    {
+      "id": 7,
+      "title": "Gaming Highlights: Epic Moments and Strategies",
+      "description": "Join us in the world of gaming as we showcase epic gameplay moments and share strategies to dominate your favorite games. Get ready for thrilling adventures and victories!",
+      "url": "https://www.youtube.com/embed/xSsiS304iY8?si=zfRrh_0I9Mkuj9e_",
+      "views": "18K",
+      "duration": "3:40",
+      "createdAt": "2023-07-18"
+    },
+    {
+      "id": 8,
+      "title": "Digital Marketing Tips and Tricks",
+      "description": "If you're looking to boost your online presence and grow your business, this video series is for you. Learn the latest digital marketing strategies and hacks to succeed online.",
+      "url": "https://www.youtube.com/embed/UY5Kxcdtv-8?si=6a0-Y_fw5q-qHqzV",
+      "views": "25K",
+      "duration": "5:10",
+      "createdAt": "2023-08-07"
+    },
+    {
+      "id": 9,
+      "title": "Photography Masterclass: Capture Stunning Photos",
+      "description": "Unleash your creativity with our photography masterclass. From camera techniques to editing tips, you'll learn how to capture stunning photos that leave a lasting impression.",
+      "url": "https://www.youtube.com/embed/B5trIZmvT2Q?si=mmby6jp9SG4UiFAs",
+      "views": "30K",
+      "duration": "6:20",
+      "createdAt": "2023-09-14"
+    },
+    {
+      "id": 10,
+      "title": "Art and Craft DIY Projects",
+      "description": "Get inspired to create beautiful art and craft projects with our DIY tutorials. From paper crafts to painting, we'll provide step-by-step instructions for your creative endeavors.",
+      "url": "https://www.youtube.com/embed/Xs2hAWuPmSg?si=lSSxw2wNYevum7We",
+      "views": "14K",
+      "duration": "2:15",
+      "createdAt": "2023-10-03"
+    },
+    {
+      "id": 11,
+      "title": "Fitness and Workout Routines",
+      "description": "Stay fit and healthy with our workout routines and fitness tips. Whether you're a beginner or an experienced athlete, we have exercises and guidance for everyone.",
+      "url": "https://www.youtube.com/embed/04kAfDdqEfg?si=8ZiVZzRjty7fqFWM",
+      "views": "7K",
+      "duration": "1:30",
+      "createdAt": "2023-11-11"
+    },
+    {
+      "id": 12,
+      "title": "Cooking Italian Cuisine: Delicious Pasta Recipes",
+      "description": "Indulge in the flavors of Italy with our pasta recipes. Learn how to make authentic Italian dishes that will transport your taste buds to the heart of Italy.",
+      "url": "https://www.youtube.com/embed/8G-ZxTjD7Zc?si=I1MWYQBns9XK0BO7",
+      "views": "22K",
+      "duration": "4:45",
+      "createdAt": "2023-12-20"
+    },
+    {
+      "id": 13,
+      "title": "Tech Gadgets and Reviews",
+      "description": "Stay up-to-date with the latest tech gadgets and reviews. We'll showcase the coolest gadgets on the market and provide in-depth reviews to help you make informed choices.",
+      "url": "https://www.youtube.com/embed/XxaRBPyrnBU?si=qN4sWa88pLcI5LNI",
+      "views": "9K",
+      "duration": "2:00",
+      "createdAt": "2024-01-25"
+    },
+    {
+      "id": 14,
+      "title": "Fashion Trends and Style Tips",
+      "description": "Elevate your fashion game with our style tips and insights into the latest fashion trends. Discover how to dress your best and stay on top of the fashion world.",
+      "url": "https://www.youtube.com/embed/XSF9AOx7sdU?si=IbQe_3hHiUCsl5LC",
+      "views": "11K",
+      "duration": "2:25",
+      "createdAt": "2024-02-12"
+    },
+    {
+      "id": 15,
+      "title": "Home Improvement and DIY Projects",
+      "description": "Transform your living space with our home improvement and DIY project ideas. We'll guide you through renovations and enhancements to make your home shine.",
+      "url": "https://www.youtube.com/embed/J3E6L58o394?si=eCv88PO1sAPSMw5B",
+      "views": "16K",
+      "duration": "3:00",
+      "createdAt": "2024-03-30"
+    },
+    {
+      "id": 16,
+      "title": "Travel Tips: Backpacking Adventures",
+      "description": "Embark on thrilling backpacking adventures with our travel tips and guides. We'll share insights on budget travel, backpacking essentials, and unforgettable destinations.",
+      "url": "https://www.youtube.com/embed/O_fqwfkWRLs?si=0orau_A60Zzl2ngI",
+      "views": "13K",
+      "duration": "2:40",
+      "createdAt": "2024-04-18"
+    },
+    {
+      "id": 17,
+      "title": "Science Explained: Fascinating Discoveries",
+      "description": "Explore the wonders of science with our explanations of fascinating discoveries and phenomena. From space exploration to groundbreaking research, we've got it covered.",
+      "url": "https://www.youtube.com/embed/78iLznY0ae4?si=6ihuxmSi3p18eKY4",
+      "views": "19K",
+      "duration": "3:20",
+      "createdAt": "2024-05-05"
+    },
+    {
+      "id": 18,
+      "title": "Cooking Asian Cuisine: Authentic Recipes",
+      "description": "Take a culinary journey through Asia with our authentic recipes. Learn how to prepare delicious dishes from various Asian cuisines that will satisfy your taste buds.",
+      "url": "https://www.youtube.com/embed/I_6aMZwf9CU?si=E-3V-zgHyZaQ8LhG",
+      "views": "21K",
+      "duration": "4:10",
+      "createdAt": "2024-06-10"
+    },
+    {
+      "id": 19,
+      "title": "Outdoor Adventures: Hiking and Camping",
+      "description": "Embrace the great outdoors with our hiking and camping adventures. We'll provide tips on outdoor survival, camping gear, and breathtaking hiking trails.",
+      "url": "https://www.youtube.com/embed/2g_OvZPC1RM?si=xhbj0ESHcINBB5x7",
+      "views": "17K",
+      "duration": "3:30",
+      "createdAt": "2024-07-15"
+    },
+    {
+      "id": 20,
+      "title": "Wildlife Documentaries: Nature's Wonders",
+      "description": "Experience the beauty of wildlife and nature through our documentaries. Join us on a journey to discover the wonders of the natural world and its magnificent creatures.",
+      "url": "https://www.youtube.com/embed/0Uc9Nr25hiQ?si=6GUlcmAnAcMAOvKJ",
+      "views": "23K",
+      "duration": "4:35",
+      "createdAt": "2024-08-20"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "lnh1w9je",
+      "title": "Implement a Debounce Function in JavaScript",
+      "totalMark": "10",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question"
+    },
+    {
+      "id": "wnc8d4k",
+      "title": "Baking Challenge: Create a Perfect Chocolate Cake",
+      "totalMark": "8",
+      "video_id": 2,
+      "video_title": "How to Bake a Perfect Chocolate Cake"
+    },
+    {
+      "id": "a2p9l5z",
+      "title": "Python Basics: Write Your First Program",
+      "totalMark": "12",
+      "video_id": 3,
+      "video_title": "Learn Python Programming for Beginners"
+    },
+    {
+      "id": "qwd3f2e",
+      "title": "Plan Your Dream Vacation: Travel Itinerary",
+      "totalMark": "9",
+      "video_id": 4,
+      "video_title": "Travel Vlog: Exploring Beautiful Destinations"
+    },
+    {
+      "id": "zxv9k0s",
+      "title": "Healthy Cooking Challenge: Prepare a Nutritious Meal",
+      "totalMark": "10",
+      "video_id": 5,
+      "video_title": "Healthy Cooking Recipes for a Fit Lifestyle"
+    },
+    {
+      "id": "bcp3w8d",
+      "title": "Stress Relief Journey: Start Your Yoga and Meditation Practice",
+      "totalMark": "7",
+      "video_id": 6,
+      "video_title": "Yoga and Meditation for Stress Relief"
+    },
+    {
+      "id": "plk9q3m",
+      "title": "Gamer's Paradise: Share Your Gaming Highlights",
+      "totalMark": "11",
+      "video_id": 7,
+      "video_title": "Gaming Highlights: Epic Moments and Strategies"
+    },
+    {
+      "id": "ytn2b0p",
+      "title": "Digital Marketing Challenge: Create a Winning Strategy",
+      "totalMark": "12",
+      "video_id": 8,
+      "video_title": "Digital Marketing Tips and Tricks"
+    },
+    {
+      "id": "nkm7o4t",
+      "title": "Capture Stunning Photos: Photography Assignment",
+      "totalMark": "9",
+      "video_id": 9,
+      "video_title": "Photography Masterclass: Capture Stunning Photos"
+    },
+    {
+      "id": "xct0z5f",
+      "title": "Artistic Creations: DIY Art and Craft Projects",
+      "totalMark": "8",
+      "video_id": 10,
+      "video_title": "Art and Craft DIY Projects"
+    },
+    {
+      "id": "hjk8y7r",
+      "title": "Get Fit Challenge: Follow the Workout Routine",
+      "totalMark": "10",
+      "video_id": 11,
+      "video_title": "Fitness and Workout Routines"
+    },
+    {
+      "id": "pok4i2s",
+      "title": "Italian Cuisine Mastery: Cook Delicious Pasta Dishes",
+      "totalMark": "11",
+      "video_id": 12,
+      "video_title": "Cooking Italian Cuisine: Delicious Pasta Recipes"
+    },
+    {
+      "id": "kli3p9u",
+      "title": "Tech Gadgets Review: Share Your Insights",
+      "totalMark": "8",
+      "video_id": 13,
+      "video_title": "Tech Gadgets and Reviews"
+    },
+    {
+      "id": "uty5g7t",
+      "title": "Fashionista's Paradise: Create a Style Showcase",
+      "totalMark": "9",
+      "video_id": 14,
+      "video_title": "Fashion Trends and Style Tips"
+    },
+    {
+      "id": "rty8k4o",
+      "title": "Home Improvement Project: Transform Your Space",
+      "totalMark": "10",
+      "video_id": 15,
+      "video_title": "Home Improvement and DIY Projects"
+    },
+    {
+      "id": "fgh7j3i",
+      "title": "Backpacker's Guide: Plan Your Adventure",
+      "totalMark": "11",
+      "video_id": 16,
+      "video_title": "Travel Tips: Backpacking Adventures"
+    },
+    {
+      "id": "wes9f3q",
+      "title": "Science Enthusiast Challenge: Explain a Fascinating Discovery",
+      "totalMark": "9",
+      "video_id": 17,
+      "video_title": "Science Explained: Fascinating Discoveries"
+    },
+    {
+      "id": "lmn5a8o",
+      "title": "Asian Cuisine Delight: Cook Authentic Dishes",
+      "totalMark": "10",
+      "video_id": 18,
+      "video_title": "Cooking Asian Cuisine: Authentic Recipes"
+    },
+    {
+      "id": "poi7h6w",
+      "title": "Outdoor Adventurer's Dream: Share Your Experience",
+      "totalMark": "9",
+      "video_id": 19,
+      "video_title": "Outdoor Adventures: Hiking and Camping"
+    },
+    {
+      "id": "xyz0b9q",
+      "title": "Wildlife Enthusiast Assignment: Document Nature's Wonders",
+      "totalMark": "10",
+      "video_id": 20,
+      "video_title": "Wildlife Documentaries: Nature's Wonders"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": 1,
+      "question": "What is a Debounce function in JavaScript?",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "options": [
+        {
+          "id": 1,
+          "option": "A function that is called after a certain time interval",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "A function that is called before a certain time interval",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "A function that is called repeatedly",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "A function that is called after a certain time interval and groups multiple rapid calls into one",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What is the key ingredient in a chocolate cake?",
+      "video_id": 2,
+      "video_title": "How to Bake a Perfect Chocolate Cake",
+      "options": [
+        {
+          "id": 1,
+          "option": "Flour",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Sugar",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Chocolate",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Milk",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What is Python's primary use case?",
+      "video_id": 3,
+      "video_title": "Learn Python Programming for Beginners",
+      "options": [
+        {
+          "id": 1,
+          "option": "Web development",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Data analysis and scientific computing",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "Game development",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "Machine learning",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Which destination was featured in the travel vlog?",
+      "video_id": 4,
+      "video_title": "Travel Vlog: Exploring Beautiful Destinations",
+      "options": [
+        {
+          "id": 1,
+          "option": "Paris, France",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Bali, Indonesia",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "New York City, USA",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "Sydney, Australia",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Which type of recipes are featured in this video?",
+      "video_id": 5,
+      "video_title": "Healthy Cooking Recipes for a Fit Lifestyle",
+      "options": [
+        {
+          "id": 1,
+          "option": "Dessert recipes",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Fast food recipes",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Healthy recipes",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Italian recipes",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What is the primary focus of this video series?",
+      "video_id": 6,
+      "video_title": "Yoga and Meditation for Stress Relief",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Yoga and meditation practices",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Gaming highlights",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What type of content is featured in this video series?",
+      "video_id": 7,
+      "video_title": "Gaming Highlights: Epic Moments and Strategies",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Gaming content",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Tech gadget reviews",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What is the primary focus of this video series?",
+      "video_id": 8,
+      "video_title": "Digital Marketing Tips and Tricks",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Digital marketing strategies",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Photography techniques",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What is the main focus of this video series?",
+      "video_id": 9,
+      "video_title": "Photography Masterclass: Capture Stunning Photos",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Photography techniques",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Gaming content",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What type of projects are featured in this video series?",
+      "video_id": 10,
+      "video_title": "Art and Craft DIY Projects",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking recipes",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Art and craft DIY projects",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Fitness and workout routines",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "question": "What is the primary focus of this video series?",
+      "video_id": 11,
+      "video_title": "Fitness and Workout Routines",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Fitness and workout routines",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Photography techniques",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "question": "What type of cuisine is featured in this video series?",
+      "video_id": 12,
+      "video_title": "Cooking Italian Cuisine: Delicious Pasta Recipes",
+      "options": [
+        {
+          "id": 1,
+          "option": "Mexican cuisine",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Italian cuisine",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "Chinese cuisine",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "Indian cuisine",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "question": "What type of content is featured in this video series?",
+      "video_id": 13,
+      "video_title": "Tech Gadgets and Reviews",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Tech gadget reviews",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "Gaming content",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "question": "What type of content is featured in this video series?",
+      "video_id": 14,
+      "video_title": "Fashion Trends and Style Tips",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Fashion trends and style tips",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Tech gadget reviews",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "question": "What type of projects are featured in this video series?",
+      "video_id": 15,
+      "video_title": "Home Improvement and DIY Projects",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking recipes",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Home improvement and DIY projects",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Fitness and workout routines",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "question": "What type of adventures are featured in this video series?",
+      "video_id": 16,
+      "video_title": "Travel Tips: Backpacking Adventures",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Backpacking adventures",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Photography techniques",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "question": "What type of content is explained in this video series?",
+      "video_id": 17,
+      "video_title": "Science Explained: Fascinating Discoveries",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Fascinating discoveries and phenomena",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "Gaming content",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "Tech gadget reviews",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "question": "What type of cuisine is featured in this video series?",
+      "video_id": 18,
+      "video_title": "Cooking Asian Cuisine: Authentic Recipes",
+      "options": [
+        {
+          "id": 1,
+          "option": "Mexican cuisine",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Italian cuisine",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Chinese cuisine",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Indian cuisine",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "question": "What type of adventures are featured in this video series?",
+      "video_id": 19,
+      "video_title": "Outdoor Adventures: Hiking and Camping",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Travel vlogs",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "Hiking and camping adventures",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "Photography techniques",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "question": "What type of content is featured in this video series?",
+      "video_id": 20,
+      "video_title": "Wildlife Documentaries: Nature's Wonders",
+      "options": [
+        {
+          "id": 1,
+          "option": "Cooking tutorials",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "Wildlife documentaries",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "Fashion trends and style tips",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "Tech gadget reviews",
+          "isCorrect": false
+        }
+      ]
+    }
+  ],
+  "assignmentMark": [
+    {
+      "id": 1,
+      "student_id": 2,
+      "student_name": "Saad Hasan",
+      "assignment_id": 1,
+      "title": "Assignment 1 - Implement Debounce Function",
+      "createdAt": "2021-01-15",
+      "totalMark": 100,
+      "mark": 50,
+      "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
+      "status": "published"
+    },
+    {
+      "id": 2,
+      "student_id": 2,
+      "student_name": "Saad Hasan",
+      "assignment_id": 1,
+      "title": "Assignment 2 - Implement Best Practices",
+      "createdAt": "2021-01-15",
+      "totalMark": 100,
+      "mark": 100,
+      "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
+      "status": "published"
+    },
+    {
+      "id": 3,
+      "student_id": 3,
+      "student_name": "Akash Ahmed",
+      "assignment_id": 1,
+      "title": "Assignment 2 - Implement Best Practices",
+      "createdAt": "2021-01-15",
+      "totalMark": 100,
+      "mark": 50,
+      "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
+      "status": "published"
+    },
+    {
+      "id": "lnhee5ru",
+      "status": "pending",
+      "repo_link": "https://github.com/ABDUL-AZIZ-JISHAN/Redux-Projects",
+      "totalMark": 10,
+      "title": "Healthy Cooking Challenge: Prepare a Nutritious Meal",
+      "mark": 0,
+      "createdAt": "2023-9-8",
+      "assignment_id": "zxv9k0s",
+      "student_name": "Admin",
+      "student_id": 1
+    },
+    {
+      "id": "lnhlumwm",
+      "status": "pending",
+      "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
+      "totalMark": 10,
+      "title": "Healthy Cooking Challenge: Prepare a Nutritious Meal",
+      "mark": 0,
+      "createdAt": "2023-9-8",
+      "assignment_id": "zxv9k0s",
+      "student_name": "Admin",
+      "student_id": 1
+    },
+    {
+      "id": "lnhlvqpb",
+      "status": "pending",
+      "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
+      "totalMark": 7,
+      "title": "Stress Relief Journey: Start Your Yoga and Meditation Practice",
+      "mark": 0,
+      "createdAt": "2023-9-8",
+      "assignment_id": "bcp3w8d",
+      "student_name": "Admin",
+      "student_id": 1
+    },
+    {
+      "id": "lnhlw1bx",
+      "status": "pending",
+      "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
+      "totalMark": 7,
+      "title": "Stress Relief Journey: Start Your Yoga and Meditation Practice",
+      "mark": 0,
+      "createdAt": "2023-9-8",
+      "assignment_id": "bcp3w8d",
+      "student_name": "Admin",
+      "student_id": 1
+    },
+    {
+      "id": "lnhnd9rh",
+      "status": "pending",
+      "repo_link": "https://github.com",
+      "totalMark": 10,
+      "title": "Implement a Debounce Function in JavaScript",
+      "mark": 0,
+      "createdAt": "2023-9-8",
+      "assignment_id": "lnh1w9je",
+      "student_name": "Student",
+      "student_id": "lnhmefr3"
+    }
+  ],
+  "quizMark": [
+    {
+      "id": 1,
+      "student_id": 2,
+      "student_name": "Saad Hasan",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "totalQuiz": 2,
+      "totalCorrect": 1,
+      "totalWrong": 1,
+      "totalMark": 10,
+      "mark": 5
     }
   ]
 }

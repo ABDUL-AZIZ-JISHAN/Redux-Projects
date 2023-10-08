@@ -56,7 +56,6 @@ html {
 
 body {
   margin: 0;
-  color: white;
   /* 1 */
   line-height: inherit;
   /* 2 */
@@ -145,9 +144,6 @@ small {
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
-.color-white{
-  color: white;
-}
 sub,
 sup {
   font-size: 75%;
@@ -1172,6 +1168,10 @@ body {
   gap: 0.75rem;
 }
 
+.table-td:last-of-type,
+  .table-th:last-of-type {
+  text-align: center;
+}
 
 .table-td input {
   width: 3.5rem;
@@ -1289,7 +1289,6 @@ body {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
   padding: 1rem;
   font-weight: 500;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
 }
 
 .quizOptions input {
@@ -1488,70 +1487,7 @@ body {
     padding-right: 5rem;
   }
 }
-.assignment-modal{
-  position: fixed;
-  left:50%;
-  top:50%;
-  /* height:200px; */
-  padding: 50px;
-  color: white;
-  /* width: 200px; */
-  z-index: 1000000;
-  background-color: #080E1B;
-  box-shadow: 4px -2px 400px 19px rgba(255,255,255,0.73);
--webkit-box-shadow: 4px -2px 400px 19px rgba(255,255,255,0.73);
--moz-box-shadow: 4px -2px 400px 19px rgba(255,255,255,0.73);
-  user-select: none;
-  border-radius: 5px;
-  pointer-events: none;
-  transform: translate(-50%, -50%) scale(0);
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-}
-.assignment-modal.active{
-  opacity: 1;
-  user-select: all;
-  pointer-events: all;
-  transform: translate(-50%, -50%)  scale(1);
-}
-.assignment-modal .title{
-  font-size: 28px;
-  text-align: center;
-}
 
-.assignment-modal .name{
-  font-size: 18px;
-  margin:20px;
-}
-.assignment-modal form .content{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.assignment-modal label{
-  white-space: nowrap;
-}
-.assignment-modal form input{
-  width: 100%;
-  margin:15px;
-  color: black;
-  border:none;
-  outline: none;
-  padding: 5px;
-}
-.assignment-modal form button{
-  margin: 20px 0;
-  background-color: cornflowerblue;
-  border: 1px solid black;
-  padding: 10px;
-  transition: all 0.3s ease-in-out;
-
-}
-.assignment-modal form button:hover{
-  color: cornflowerblue;
-  border-color: cornflowerblue;
-  background-color: transparent;
-}
 @media (min-width: 768px) {
   @media (min-width: 1024px) {
     @media (min-width: 1280px) {
